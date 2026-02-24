@@ -21,7 +21,19 @@ body{
   overflow-x:hidden;
 }
 
-/* ===== PROFESSIONAL LANDING ===== */
+/* ===== COMMON SECTION STYLE ===== */
+section{
+  padding:90px 8%;
+  position:relative;
+}
+
+h2{
+  font-size:34px;
+  margin-bottom:40px;
+  text-align:center;
+}
+
+/* ===== HERO SECTION ===== */
 .hero{
   height:100vh;
   display:flex;
@@ -29,7 +41,6 @@ body{
   justify-content:center;
   align-items:center;
   text-align:center;
-  padding:0 20px;
   background:linear-gradient(120deg,#0e0e0e,#111827,#0e0e0e);
   position:relative;
 }
@@ -45,9 +56,8 @@ body{
 }
 
 .hero h1{
-  font-size:52px;
+  font-size:56px;
   font-weight:600;
-  letter-spacing:1px;
 }
 
 .hero span{
@@ -62,63 +72,104 @@ body{
   line-height:1.6;
 }
 
-.hero .btn{
-  margin-top:30px;
-  padding:12px 30px;
+.btn{
+  margin-top:35px;
+  padding:13px 35px;
   background:#00c896;
   color:#fff;
   border:none;
   border-radius:30px;
-  font-size:15px;
   text-decoration:none;
   transition:0.3s;
 }
 
-.hero .btn:hover{
+.btn:hover{
   background:#fff;
   color:#000;
 }
 
-/* ===== Sections ===== */
-section{
-  padding:80px 8%;
-  background:#f4f6f9;
-  color:#111;
-}
-
-h2{
-  font-size:32px;
-  margin-bottom:20px;
-}
-
-.skills-container,
-.projects-container{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:30px;
-  margin-top:40px;
-}
-
-.skill-box,
-.project-box{
+/* ===== ABOUT ===== */
+.about{
   background:#111;
-  color:#ccc;
+  text-align:center;
+}
+
+.about p{
+  max-width:750px;
+  margin:auto;
+  line-height:1.7;
+  color:#cfcfcf;
+  font-size:17px;
+}
+
+/* ===== SKILLS ===== */
+.skills{
+  background:#0e0e0e;
+}
+
+.skills-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+
+.skill-box{
+  background:#111;
   padding:30px;
-  border-radius:14px;
-  transition:0.3s ease;
-  box-shadow:0 8px 25px rgba(0,0,0,0.1);
+  border-radius:16px;
+  position:relative;
+  overflow:hidden;
+  transition:0.4s;
   cursor:pointer;
 }
 
-.skill-box:hover,
+.skill-box h3{
+  color:#00c896;
+  margin-bottom:15px;
+}
+
+.skill-content{
+  position:absolute;
+  bottom:-100%;
+  left:0;
+  width:100%;
+  height:100%;
+  background:#00c896;
+  color:#fff;
+  padding:25px;
+  transition:0.4s;
+}
+
+.skill-box:hover .skill-content{
+  bottom:0;
+}
+
+.skill-box:hover{
+  transform:translateY(-10px);
+}
+
+/* ===== PROJECTS ===== */
+.projects{
+  background:#111;
+}
+
+.projects-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+
+.project-box{
+  background:#0e0e0e;
+  padding:30px;
+  border-radius:16px;
+  transition:0.4s;
+}
+
 .project-box:hover{
   background:#00c896;
   color:#fff;
-  transform:translateY(-8px);
-}
-
-.project-box h3{
-  margin-bottom:12px;
+  transform:translateY(-10px);
 }
 
 .project-box:hover h3,
@@ -126,18 +177,23 @@ h2{
   color:#fff;
 }
 
+/* ===== CONTACT ===== */
 .contact{
-  background:#111;
-  color:#fff;
+  background:#0e0e0e;
   text-align:center;
-  padding:60px 8%;
+}
+
+.contact p{
+  margin:12px 0;
+  font-size:17px;
+  color:#cfcfcf;
 }
 
 footer{
   background:#000;
   text-align:center;
-  padding:20px;
-  font-size:13px;
+  padding:25px;
+  font-size:14px;
   color:#aaa;
 }
 </style>
@@ -145,48 +201,90 @@ footer{
 
 <body>
 
-<!-- HERO LANDING -->
-<div class="hero">
+<!-- HERO -->
+<section class="hero">
   <h1>Gaurav Rathore</h1>
-  <p><span>Performance Digital Marketer</span> specializing in Meta Ads, Meesho optimization, 
-  and high-converting creative strategies that drive measurable business growth.</p>
+  <p><span>Performance Digital Marketer</span> driving measurable growth through Meta Ads, Meesho optimization, and conversion-focused creative strategies.</p>
   <a href="#contact" class="btn">Hire Me</a>
-</div>
+</section>
 
-<section>
+<!-- ABOUT -->
+<section class="about">
+  <h2>About Me</h2>
+  <p>
+    I specialize in scaling brands using high-converting Meta Ads campaigns,
+    optimized product listings, and performance-driven creative design.
+    My approach combines data analysis, strategic targeting, and engaging visuals
+    to maximize ROI and long-term growth.
+  </p>
+</section>
+
+<!-- SKILLS -->
+<section class="skills">
   <h2>Core Expertise</h2>
   <div class="skills-container">
-    <div class="skill-box">Meta Ads Campaign Strategy</div>
-    <div class="skill-box">Meesho Product Optimization</div>
-    <div class="skill-box">Conversion Focused Creatives</div>
-    <div class="skill-box">Brand Identity & Logo Design</div>
-    <div class="skill-box">Short Form Video Marketing</div>
-    <div class="skill-box">AI Driven Marketing Tools</div>
+
+    <div class="skill-box">
+      <h3>Meta Ads</h3>
+      <div class="skill-content">
+        • Audience Research & Targeting<br>
+        • Conversion Campaign Setup<br>
+        • ROI Optimization<br>
+        • Retargeting Strategy
+      </div>
+    </div>
+
+    <div class="skill-box">
+      <h3>Meesho Optimization</h3>
+      <div class="skill-content">
+        • SEO Friendly Listings<br>
+        • High CTR Product Titles<br>
+        • Image Optimization<br>
+        • Sales Growth Strategy
+      </div>
+    </div>
+
+    <div class="skill-box">
+      <h3>Creative Design</h3>
+      <div class="skill-content">
+        • Social Media Creatives<br>
+        • Ad Banners & Posters<br>
+        • Branding & Identity<br>
+        • Conversion Focused Design
+      </div>
+    </div>
+
   </div>
 </section>
 
-<section>
+<!-- PROJECTS -->
+<section class="projects">
   <h2>Selected Projects</h2>
   <div class="projects-container">
+
     <div class="project-box">
-      <h3>High-ROI Meta Campaign</h3>
-      <p>Delivered scalable paid campaigns with consistent performance growth.</p>
+      <h3>High ROI Meta Campaign</h3>
+      <p>Managed performance campaigns generating scalable revenue growth.</p>
     </div>
+
     <div class="project-box">
-      <h3>Meesho Sales Growth</h3>
-      <p>Optimized product listings to increase discoverability and conversions.</p>
+      <h3>Meesho Sales Boost</h3>
+      <p>Optimized listings leading to improved visibility and conversions.</p>
     </div>
+
     <div class="project-box">
       <h3>Brand Creative Strategy</h3>
-      <p>Designed performance-driven visuals for social media growth.</p>
+      <p>Designed data-driven creatives for higher engagement rates.</p>
     </div>
+
   </div>
 </section>
 
+<!-- CONTACT -->
 <section class="contact" id="contact">
   <h2>Contact</h2>
-  <p>Email: yourgmail@gmail.com</p>
-  <p>Phone: +91 XXXXX XXXXX</p>
+  <p>Email: rathoregaurav679@gmail.com</p>
+  <p>Phone: 7210008237</p>
 </section>
 
 <footer>
