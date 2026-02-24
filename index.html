@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gaurav Rathore | Performance Digital Marketer</title>
+<title>Gaurav Rathore | Performance Marketer</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
@@ -12,176 +12,208 @@
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family:'Poppins', sans-serif;
+  font-family:'Poppins',sans-serif;
+}
+
+html{
+  scroll-behavior:smooth;
 }
 
 body{
-  background:#0e0e0e;
+  background:#0c0f14;
   color:#fff;
   overflow-x:hidden;
 }
 
-section{
-  padding:100px 8%;
-}
+/* ===== HERO (AGENCY STYLE SPLIT) ===== */
 
-h2{
-  text-align:center;
-  font-size:34px;
-  margin-bottom:50px;
-}
-
-/* HERO */
 .hero{
-  height:100vh;
+  min-height:100vh;
   display:flex;
-  flex-direction:column;
-  justify-content:center;
   align-items:center;
-  text-align:center;
-  background:linear-gradient(120deg,#0e0e0e,#111827,#0e0e0e);
+  justify-content:space-between;
+  padding:0 8%;
+  flex-wrap:wrap;
 }
 
-.hero h1{
-  font-size:56px;
+.hero-left{
+  flex:1;
+  min-width:300px;
 }
 
-.hero span{
+.hero-left h1{
+  font-size:52px;
+  font-weight:600;
+}
+
+.hero-left h2{
+  font-size:22px;
+  margin-top:15px;
   color:#00c896;
+  height:30px;
 }
 
-.hero p{
+.hero-left p{
   margin-top:20px;
-  max-width:650px;
+  max-width:500px;
   color:#cfcfcf;
 }
 
 .btn{
-  margin-top:30px;
-  padding:13px 35px;
+  display:inline-block;
+  margin-top:25px;
+  padding:12px 30px;
   background:#00c896;
-  color:#fff;
   border-radius:30px;
   text-decoration:none;
+  color:#fff;
   transition:0.3s;
 }
 
 .btn:hover{
   background:#fff;
   color:#000;
+  transform:translateY(-3px);
 }
 
-/* STATS */
+/* HERO RIGHT DASHBOARD */
+.hero-right{
+  flex:1;
+  min-width:300px;
+  display:flex;
+  justify-content:center;
+}
+
+.dashboard{
+  width:320px;
+  height:220px;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(20px);
+  border-radius:20px;
+  padding:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.4);
+  position:relative;
+}
+
+.bar{
+  height:8px;
+  background:#00c896;
+  margin:15px 0;
+  border-radius:10px;
+  animation:grow 2s infinite alternate;
+}
+
+.bar:nth-child(1){width:70%;}
+.bar:nth-child(2){width:90%;}
+.bar:nth-child(3){width:60%;}
+
+@keyframes grow{
+  from{opacity:0.6;}
+  to{opacity:1;}
+}
+
+/* ===== STATS ===== */
+
 .stats{
-  background:#111;
+  padding:80px 8%;
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
   gap:30px;
   text-align:center;
 }
 
-.stat-box{
+.stat{
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(15px);
   padding:30px;
-  background:#0e0e0e;
-  border-radius:15px;
+  border-radius:20px;
+  transition:0.3s;
 }
 
-.stat-box h3{
+.stat:hover{
+  transform:translateY(-8px);
+}
+
+.stat h3{
   font-size:40px;
   color:#00c896;
 }
 
-.stat-box p{
-  color:#ccc;
+/* ===== GLASS CARDS ===== */
+
+.section{
+  padding:100px 8%;
 }
 
-/* SKILLS */
-.skills-container{
+.cards{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
   gap:30px;
 }
 
-.skill-box{
-  background:#111;
+.card{
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(15px);
   padding:30px;
-  border-radius:16px;
+  border-radius:20px;
+  transition:0.4s;
   position:relative;
   overflow:hidden;
-  transition:0.4s;
 }
 
-.skill-box h3{
+.card:hover{
+  transform:translateY(-10px);
+  background:#00c896;
+  color:#fff;
+}
+
+.card h3{
+  margin-bottom:15px;
   color:#00c896;
 }
 
-.skill-content{
-  position:absolute;
-  bottom:-100%;
-  left:0;
-  width:100%;
-  height:100%;
-  background:#00c896;
+.card:hover h3{
   color:#fff;
-  padding:25px;
-  transition:0.4s;
 }
 
-.skill-box:hover .skill-content{
-  bottom:0;
-}
+/* ===== CONTACT ===== */
 
-/* TESTIMONIALS */
-.testimonials{
-  background:#111;
-}
-
-.testimonial-box{
-  background:#0e0e0e;
-  padding:30px;
-  border-radius:15px;
-  margin-bottom:20px;
-}
-
-.testimonial-box p{
-  color:#ccc;
-}
-
-/* CONTACT */
 .contact{
+  padding:80px 8%;
   text-align:center;
 }
 
 footer{
   text-align:center;
-  padding:25px;
+  padding:20px;
   background:#000;
   color:#aaa;
 }
 
-/* WHATSAPP BUTTON */
+/* ===== WHATSAPP ===== */
+
 .whatsapp{
   position:fixed;
   bottom:25px;
   right:25px;
   background:#25D366;
-  color:#fff;
-  padding:15px 18px;
+  padding:15px;
   border-radius:50%;
-  font-size:20px;
+  color:#fff;
   text-decoration:none;
+  font-size:20px;
 }
 
-/* SCROLL ANIMATION */
-.hidden{
-  opacity:0;
-  transform:translateY(40px);
-  transition:all 0.8s ease;
-}
+/* ===== RESPONSIVE ===== */
 
-.show{
-  opacity:1;
-  transform:translateY(0);
+@media(max-width:900px){
+  .hero{
+    flex-direction:column;
+    text-align:center;
+  }
+  .hero-right{
+    margin-top:40px;
+  }
 }
 </style>
 </head>
@@ -189,70 +221,64 @@ footer{
 <body>
 
 <!-- HERO -->
-<section class="hero hidden">
-  <h1>Gaurav Rathore</h1>
-  <p><span>Performance Digital Marketer</span> driving growth through Meta Ads and conversion-focused strategies.</p>
-  <a href="resume.pdf" download class="btn">Download Resume</a>
+<section class="hero">
+  <div class="hero-left">
+    <h1>Gaurav Rathore</h1>
+    <h2 id="typing"></h2>
+    <p>I help brands scale using data-driven Meta Ads, optimized listings, and high-converting creative strategy.</p>
+    <a href="#contact" class="btn">Hire Me</a>
+  </div>
+
+  <div class="hero-right">
+    <div class="dashboard">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </div>
 </section>
 
 <!-- STATS -->
-<section class="stats hidden">
-  <div class="stat-box">
+<section class="stats">
+  <div class="stat">
     <h3 class="counter" data-target="50">0</h3>
     <p>Campaigns Managed</p>
   </div>
-  <div class="stat-box">
+  <div class="stat">
     <h3 class="counter" data-target="200">0</h3>
     <p>% ROI Growth</p>
   </div>
-  <div class="stat-box">
+  <div class="stat">
     <h3 class="counter" data-target="100">0</h3>
     <p>Happy Clients</p>
   </div>
 </section>
 
 <!-- SKILLS -->
-<section class="hidden">
-  <h2>Core Expertise</h2>
-  <div class="skills-container">
+<section class="section">
+  <h2 style="text-align:center;margin-bottom:50px;">Core Expertise</h2>
+  <div class="cards">
 
-    <div class="skill-box">
+    <div class="card">
       <h3>Meta Ads</h3>
-      <div class="skill-content">
-        • Audience Targeting<br>
-        • Conversion Campaigns<br>
-        • Retargeting Strategy<br>
-        • ROI Optimization
-      </div>
+      Audience Targeting, Conversion Campaign Setup, Retargeting & ROI Scaling.
     </div>
 
-    <div class="skill-box">
+    <div class="card">
       <h3>Meesho Optimization</h3>
-      <div class="skill-content">
-        • SEO Listings<br>
-        • High CTR Titles<br>
-        • Sales Boost Strategy
-      </div>
+      SEO Listings, High CTR Titles, Sales Boost Strategy.
     </div>
 
-  </div>
-</section>
+    <div class="card">
+      <h3>Creative Strategy</h3>
+      High-converting creatives, branding & short-form content marketing.
+    </div>
 
-<!-- TESTIMONIALS -->
-<section class="testimonials hidden">
-  <h2>Client Testimonials</h2>
-  <div class="testimonial-box">
-    <p>"Gaurav helped scale our ads with consistent ROI improvement."</p>
-    <strong>- Client A</strong>
-  </div>
-  <div class="testimonial-box">
-    <p>"Professional and results-driven marketer."</p>
-    <strong>- Client B</strong>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section class="contact hidden">
+<section class="contact" id="contact">
   <h2>Contact</h2>
   <p>Email: rathoregaurav679@gmail.com</p>
   <p>Phone: 7210008237</p>
@@ -262,38 +288,49 @@ footer{
   © 2026 Gaurav Rathore | Performance Digital Marketer
 </footer>
 
-<!-- WhatsApp -->
 <a href="https://wa.me/917210008237" class="whatsapp" target="_blank">W</a>
 
 <script>
-// Counter Animation
-const counters = document.querySelectorAll('.counter');
-counters.forEach(counter=>{
-  const updateCount = ()=>{
-    const target = +counter.getAttribute('data-target');
-    const count = +counter.innerText;
-    const increment = target / 100;
-    if(count < target){
-      counter.innerText = Math.ceil(count + increment);
-      setTimeout(updateCount, 20);
-    } else {
-      counter.innerText = target;
-    }
-  };
-  updateCount();
-});
+/* Typing Animation */
+const text = "Performance Digital Marketer";
+let i = 0;
+function typing(){
+  if(i < text.length){
+    document.getElementById("typing").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typing, 60);
+  }
+}
+typing();
 
-// Scroll Reveal
-const hiddenElements = document.querySelectorAll('.hidden');
+/* Stats Counter (on scroll realistic trigger) */
+const counters = document.querySelectorAll('.counter');
+const speed = 100;
+
 const observer = new IntersectionObserver(entries=>{
   entries.forEach(entry=>{
     if(entry.isIntersecting){
-      entry.target.classList.add('show');
+      const counter = entry.target;
+      const updateCount = ()=>{
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const inc = target / speed;
+        if(count < target){
+          counter.innerText = Math.ceil(count + inc);
+          setTimeout(updateCount, 30);
+        } else {
+          counter.innerText = target;
+        }
+      };
+      updateCount();
+      observer.unobserve(counter);
     }
   });
-});
+},{threshold:0.7});
 
-hiddenElements.forEach(el=>observer.observe(el));
+counters.forEach(counter=>{
+  observer.observe(counter);
+});
 </script>
 
 </body>
