@@ -4,384 +4,185 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gaurav Rathore | Digital Marketer</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-/* ===== Global Styling ===== */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Poppins', sans-serif;
-  background: #f4f6f9;
-  color: #333;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
 }
 
-/* Section spacing */
-section {
-  padding: 60px 8%;
+body{
+  background:#f4f6f9;
+  color:#333;
+  scroll-behavior:smooth;
 }
 
-/* Headings */
-h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-  color: #111;
+header{
+  background:#111;
+  color:#fff;
+  padding:20px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
-/* About Text */
-.about p {
-  max-width: 700px;
-  line-height: 1.6;
-  font-size: 17px;
-  color: #555;
+header h1{
+  font-size:22px;
 }
 
-/* ===== Skills Section ===== */
-
-.skills-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
-  margin-top: 30px;
+nav a{
+  color:#fff;
+  text-decoration:none;
+  margin-left:20px;
+  font-size:14px;
+  transition:0.3s;
 }
 
-.skill-box {
-  background: #111;
-  color: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  text-align: center;
-  font-size: 18px;
-  font-weight: 500;
-  transition: 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+nav a:hover{
+  color:#00c896;
 }
 
-.skill-box:hover {
-  transform: translateY(-5px);
-  background: #00c896;
+section{
+  padding:70px 8%;
 }
 
-/* ===== Projects Section ===== */
-
-.projects-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
+h2{
+  font-size:32px;
+  margin-bottom:20px;
 }
 
-.project-box {
-  background: #111;
-  color: #fff;
-  padding: 25px;
-  border-radius: 15px;
-  transition: 0.3s ease;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
-}
-
-.project-box h3 {
-  margin-bottom: 10px;
-  font-size: 20px;
-}
-
-.project-box p {
-  font-size: 15px;
-  color: #ddd;
-}
-
-.project-box:hover {
-  transform: translateY(-8px);
-  background: #00c896;
-}
-/* HERO SECTION WITH BACKGROUND IMAGE */
-.hero{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-background:
-linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
-url('https://images.unsplash.com/photo-1557838923-2985c318be48');
-background-size:cover;
-background-position:center;
-}
-
-.hero h1{font-size:48px;}
-.hero span{color:#00ffcc;}
-.hero p{margin:15px 0;color:#ccc;}
-
-.btn{
-padding:12px 25px;
-background:#00ffcc;
-color:black;
-border-radius:30px;
-text-decoration:none;
-font-weight:600;
-transition:.3s;
-}
-.btn:hover{background:white;}
-
-/* ABOUT ANIMATION */
-.about{
-opacity:0;
-transform:translateY(50px);
-transition:1s;
-}
-.about.show{
-opacity:1;
-transform:translateY(0);
-}
 .about p{
-max-width:700px;
-margin:auto;
-text-align:center;
-line-height:1.8;
-color:#ccc;
+  max-width:700px;
+  line-height:1.6;
+  font-size:16px;
+  color:#555;
 }
 
-/* SKILLS */
-.skills-container{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:20px;
-}
-.skill{
-background:#1f1f1f;
-padding:20px;
-border-radius:15px;
-border:1px solid #00ffcc;
-cursor:pointer;
-width:250px;
-transition:.3s;
-}
-.skill:hover{transform:scale(1.05);}
-
-.skill-content{
-display:none;
-margin-top:10px;
-font-size:14px;
-color:#ccc;
+.skills-container,
+.projects-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+  margin-top:30px;
 }
 
-/* PROJECTS */
-.projects{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-.project-card{
-background:#1a1a1a;
-padding:20px;
-border-radius:15px;
-transition:.3s;
-}
-.project-card:hover{transform:translateY(-10px);}
-
-/* BANNER SECTION */
-.banner{
-background:linear-gradient(135deg,#00ffcc,#007777);
-text-align:center;
-padding:60px 10%;
-font-size:28px;
-font-weight:600;
-animation:glow 2s infinite alternate;
-}
-@keyframes glow{
-from{box-shadow:0 0 10px #00ffcc;}
-to{box-shadow:0 0 30px #00ffcc;}
+.skill-box,
+.project-box{
+  background:#111;
+  color:#fff;
+  padding:25px;
+  border-radius:12px;
+  transition:0.3s ease;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
-/* CONTACT */
-.contact{text-align:center;}
-.contact input,.contact textarea{
-width:80%;
-padding:10px;
-margin:10px 0;
-border:none;
-border-radius:10px;
-}
-.contact button{
-padding:10px 20px;
-background:#00ffcc;
-border:none;
-border-radius:20px;
-font-weight:600;
-cursor:pointer;
+.skill-box{
+  text-align:center;
+  font-weight:500;
 }
 
-.social-icons{
-margin-top:20px;
-}
-.social-icons a{
-color:#00ffcc;
-margin:0 10px;
-font-size:18px;
-text-decoration:none;
+.project-box h3{
+  margin-bottom:10px;
 }
 
-/* WHATSAPP */
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:15px;
-border-radius:50%;
-font-size:22px;
-text-decoration:none;
+.project-box p{
+  font-size:14px;
+  color:#ddd;
 }
 
-footer{text-align:center;padding:20px;background:#111;color:#777;}
+.skill-box:hover,
+.project-box:hover{
+  background:#00c896;
+  transform:translateY(-6px);
+}
+
+.contact{
+  background:#111;
+  color:#fff;
+  text-align:center;
+  padding:50px 8%;
+}
+
+.contact p{
+  margin:10px 0;
+}
+
+footer{
+  text-align:center;
+  padding:20px;
+  background:#000;
+  color:#aaa;
+  font-size:13px;
+}
 </style>
 </head>
 
 <body>
 
-<section class="hero">
-<h1>Hi, I'm <span>Gaurav Rathore</span></h1>
-<p>Digital Marketer | Meta Ads | Graphics Designer</p>
-<a href="#contact" class="btn">Hire Me</a>
+<header>
+  <h1>Gaurav Rathore</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="about" class="about">
+  <h2>About Me</h2>
+  <p>
+    I am a professional Digital Marketer specializing in Meta Ads, Meesho product listing,
+    graphics design, logo creation, and reels editing. I help brands grow online with
+    smart advertising strategies and creative visuals.
+  </p>
 </section>
 
-<section class="about" id="about">
-<h2>About Me</h2>
-<p>
-I am a professional Digital Marketer specializing in Meta Ads,
-Meesho listing, graphics design, logo creation, and reels editing.
-I help brands grow online with smart ad strategies and creative visuals.
-</p>
+<section id="skills">
+  <h2>My Skills</h2>
+  <div class="skills-container">
+    <div class="skill-box">Meta Ads Campaign Management</div>
+    <div class="skill-box">Meesho Product Listing</div>
+    <div class="skill-box">Social Media Graphics Design</div>
+    <div class="skill-box">Logo Design & Branding</div>
+    <div class="skill-box">Reels & Short Video Editing</div>
+    <div class="skill-box">AI Tools for Marketing</div>
+  </div>
 </section>
 
-<section class="skills">
-<h2>My Skills</h2>
-<div class="skills-container">
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects-container">
+    <div class="project-box">
+      <h3>Meta Ads Campaign</h3>
+      <p>Managed high-converting ad campaigns generating strong ROI and engagement.</p>
+    </div>
 
-<div class="skill" onclick="toggleSkill(this)">
-Meta Ads
-<div class="skill-content">
-• Audience Targeting<br>
-• Conversion Tracking<br>
-• High ROI Campaigns
-</div>
-</div>
+    <div class="project-box">
+      <h3>Meesho Product Optimization</h3>
+      <p>Improved product visibility and boosted sales through SEO-friendly listings.</p>
+    </div>
 
-<div class="skill" onclick="toggleSkill(this)">
-Graphics Design
-<div class="skill-content">
-• Social Media Creatives<br>
-• Brand Posters<br>
-• Marketing Banners
-</div>
-</div>
-
-<div class="skill" onclick="toggleSkill(this)">
-Logo Design
-<div class="skill-content">
-• Modern Branding<br>
-• Minimal Logos<br>
-• Business Identity
-</div>
-</div>
-
-<div class="skill" onclick="toggleSkill(this)">
-AI Tools
-<div class="skill-content">
-• ChatGPT Usage<br>
-• AI Image Creation<br>
-• Automation Tools
-</div>
-</div>
-
-<div class="skill" onclick="toggleSkill(this)">
-Meesho Listing
-<div class="skill-content">
-• SEO Optimized Titles<br>
-• Product Descriptions<br>
-• Sales Optimization
-</div>
-</div>
-
-<div class="skill" onclick="toggleSkill(this)">
-Reels Editing
-<div class="skill-content">
-• Trend Based Editing<br>
-• Viral Hooks<br>
-• Professional Transitions
-</div>
-</div>
-
-</div>
+    <div class="project-box">
+      <h3>Social Media Creatives</h3>
+      <p>Designed engaging brand creatives for Instagram and Facebook marketing.</p>
+    </div>
+  </div>
 </section>
 
-<section>
-<h2>Projects</h2>
-<div class="projects">
-<div class="project-card">
-<h3>Meta Ads Campaign</h3>
-<p>Successfully managed high-converting ad campaigns.</p>
-</div>
-<div class="project-card">
-<h3>Meesho Product Listing</h3>
-<p>Optimized listings for better visibility and sales.</p>
-</div>
-<div class="project-card">
-<h3>Social Media Graphics</h3>
-<p>Designed engaging creatives for brands.</p>
-</div>
-</div>
+<section id="contact" class="contact">
+  <h2>Contact Me</h2>
+  <p>Email: yourgmail@gmail.com</p>
+  <p>Phone: +91 XXXXX XXXXX</p>
+  <p>Location: India</p>
 </section>
-
-<!-- NEW BANNER -->
-<section class="banner">
-🚀 Let's Grow Your Brand With Smart Digital Marketing 🚀
-</section>
-
-<section class="contact" id="contact">
-<h2>Contact Me</h2>
-<p>Email: rathoregaurav679@gmail.com</p>
-<p>Phone: 7210008237</p>
-
-<form>
-<input type="text" placeholder="Your Name">
-<input type="email" placeholder="Your Email">
-<textarea rows="4" placeholder="Your Message"></textarea>
-<button type="submit">Send Message</button>
-</form>
-
-<div class="social-icons">
-<a href="https://instagram.com/elevatedigital29" target="_blank">Instagram</a>
-</div>
-</section>
-
-<a href="https://wa.me/917210008237" class="whatsapp" target="_blank">W</a>
 
 <footer>
-© 2026 Gaurav Rathore | Digital Marketer
+  © 2026 Gaurav Rathore | Digital Marketer Portfolio
 </footer>
-
-<script>
-/* About animation on scroll */
-window.addEventListener('scroll', function(){
-let about = document.querySelector('.about');
-let position = about.getBoundingClientRect().top;
-let screenPosition = window.innerHeight / 1.3;
-if(position < screenPosition){
-about.classList.add('show');
-}
-});
-
-/* Skill toggle */
-function toggleSkill(element){
-let content = element.querySelector('.skill-content');
-content.style.display = content.style.display === "block" ? "none" : "block";
-}
-</script>
 
 </body>
 </html>
