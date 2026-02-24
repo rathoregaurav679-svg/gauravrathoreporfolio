@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gaurav Rathore | Digital Marketer</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -15,49 +16,94 @@
 }
 
 body{
-  background:#f4f6f9;
+  background:#0f2027;
   color:#333;
-  scroll-behavior:smooth;
+  overflow-x:hidden;
 }
 
-header{
-  background:#111;
-  color:#fff;
-  padding:20px 8%;
+/* ===== Animated Background ===== */
+.hero{
+  height:100vh;
   display:flex;
-  justify-content:space-between;
+  flex-direction:column;
+  justify-content:center;
   align-items:center;
-}
-
-header h1{
-  font-size:22px;
-}
-
-nav a{
+  text-align:center;
   color:#fff;
-  text-decoration:none;
-  margin-left:20px;
-  font-size:14px;
-  transition:0.3s;
+  position:relative;
+  background:linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#00c896);
+  background-size:400% 400%;
+  animation:gradientMove 10s ease infinite;
 }
 
-nav a:hover{
-  color:#00c896;
+@keyframes gradientMove{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
 }
 
+.hero h1{
+  font-size:48px;
+}
+
+.hero p{
+  margin-top:15px;
+  font-size:18px;
+  max-width:600px;
+}
+
+/* Floating icons animation */
+.circle{
+  position:absolute;
+  border-radius:50%;
+  background:rgba(255,255,255,0.08);
+  animation:float 8s infinite linear;
+}
+
+.circle:nth-child(1){
+  width:120px;
+  height:120px;
+  top:10%;
+  left:15%;
+}
+
+.circle:nth-child(2){
+  width:80px;
+  height:80px;
+  bottom:15%;
+  right:20%;
+  animation-duration:12s;
+}
+
+.circle:nth-child(3){
+  width:60px;
+  height:60px;
+  top:60%;
+  left:70%;
+  animation-duration:6s;
+}
+
+@keyframes float{
+  0%{transform:translateY(0px);}
+  50%{transform:translateY(-20px);}
+  100%{transform:translateY(0px);}
+}
+
+/* ===== Sections ===== */
 section{
   padding:70px 8%;
+  background:#f4f6f9;
 }
 
 h2{
   font-size:32px;
   margin-bottom:20px;
+  color:#111;
 }
 
 .about p{
   max-width:700px;
   line-height:1.6;
-  font-size:16px;
   color:#555;
 }
 
@@ -72,31 +118,28 @@ h2{
 .skill-box,
 .project-box{
   background:#111;
-  color:#fff;
+  color:#ccc;
   padding:25px;
   border-radius:12px;
   transition:0.3s ease;
   box-shadow:0 5px 15px rgba(0,0,0,0.1);
-}
-
-.skill-box{
-  text-align:center;
-  font-weight:500;
+  cursor:pointer;
 }
 
 .project-box h3{
   margin-bottom:10px;
 }
 
-.project-box p{
-  font-size:14px;
-  color:#ddd;
-}
-
 .skill-box:hover,
 .project-box:hover{
   background:#00c896;
+  color:#fff;   /* TEXT WHITE ON HOVER */
   transform:translateY(-6px);
+}
+
+.project-box:hover p,
+.project-box:hover h3{
+  color:#fff;
 }
 
 .contact{
@@ -106,82 +149,75 @@ h2{
   padding:50px 8%;
 }
 
-.contact p{
-  margin:10px 0;
-}
-
 footer{
   text-align:center;
   padding:20px;
   background:#000;
   color:#aaa;
-  font-size:13px;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-  <h1>Gaurav Rathore</h1>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+<!-- HERO SECTION -->
+<div class="hero">
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
 
-<section id="about" class="about">
+  <h1>Gaurav Rathore</h1>
+  <p>Digital Marketer | Meta Ads Expert | Meesho Specialist | Creative Designer</p>
+</div>
+
+<section class="about">
   <h2>About Me</h2>
   <p>
-    I am a professional Digital Marketer specializing in Meta Ads, Meesho product listing,
-    graphics design, logo creation, and reels editing. I help brands grow online with
-    smart advertising strategies and creative visuals.
+    I help brands grow using high-converting Meta Ads, optimized Meesho listings,
+    and engaging creative designs. My goal is to generate strong ROI and build powerful brand presence online.
   </p>
 </section>
 
-<section id="skills">
+<section>
   <h2>My Skills</h2>
   <div class="skills-container">
     <div class="skill-box">Meta Ads Campaign Management</div>
     <div class="skill-box">Meesho Product Listing</div>
-    <div class="skill-box">Social Media Graphics Design</div>
-    <div class="skill-box">Logo Design & Branding</div>
-    <div class="skill-box">Reels & Short Video Editing</div>
-    <div class="skill-box">AI Tools for Marketing</div>
+    <div class="skill-box">Graphics & Branding</div>
+    <div class="skill-box">Logo Design</div>
+    <div class="skill-box">Reels & Video Editing</div>
+    <div class="skill-box">AI Marketing Tools</div>
   </div>
 </section>
 
-<section id="projects">
+<section>
   <h2>Projects</h2>
   <div class="projects-container">
     <div class="project-box">
       <h3>Meta Ads Campaign</h3>
-      <p>Managed high-converting ad campaigns generating strong ROI and engagement.</p>
+      <p>Generated high ROI through optimized ad targeting and creatives.</p>
     </div>
 
     <div class="project-box">
-      <h3>Meesho Product Optimization</h3>
-      <p>Improved product visibility and boosted sales through SEO-friendly listings.</p>
+      <h3>Meesho Optimization</h3>
+      <p>Improved visibility and boosted product sales significantly.</p>
     </div>
 
     <div class="project-box">
       <h3>Social Media Creatives</h3>
-      <p>Designed engaging brand creatives for Instagram and Facebook marketing.</p>
+      <p>Designed high engagement creatives for multiple brands.</p>
     </div>
   </div>
 </section>
 
-<section id="contact" class="contact">
+<section class="contact">
   <h2>Contact Me</h2>
   <p>Email: yourgmail@gmail.com</p>
   <p>Phone: +91 XXXXX XXXXX</p>
-  <p>Location: India</p>
 </section>
 
 <footer>
-  © 2026 Gaurav Rathore | Digital Marketer Portfolio
+  © 2026 Gaurav Rathore | Digital Marketer
 </footer>
 
 </body>
