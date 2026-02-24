@@ -13,24 +13,20 @@
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
-gap:25px;
+gap:20px;
 }
 
 .skill{
 background:#1f1f1f;
 padding:20px;
-border-radius:15px;
+border-radius:12px;
 border:1px solid #00ffcc;
 cursor:pointer;
-width:260px;
-transition:0.4s;
-position:relative;
-overflow:hidden;
+width:250px;
+transition:0.3s;
 }
 
 .skill:hover{
-transform:translateY(-8px);
-box-shadow:0 0 20px #00ffcc;
 background:#002a2a;
 }
 
@@ -40,18 +36,15 @@ margin-bottom:10px;
 }
 
 .skill-content{
-max-height:0;
-overflow:hidden;
-transition:0.4s ease;
+display:none;
 font-size:14px;
 color:#ccc;
 }
 
 .skill.active .skill-content{
-max-height:200px;
+display:block;
 margin-top:10px;
 }
-
 /* HERO SECTION WITH BACKGROUND IMAGE */
 .hero{
 height:100vh;
